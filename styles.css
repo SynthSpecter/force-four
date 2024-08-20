@@ -5,6 +5,72 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #0b0033;
+  font-family: 'Arial', sans-serif;
+  color: #ff00cc;
+}
+
+#start-menu {
+  text-align: center;
+  background-color: rgba(34, 0, 51, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+}
+
+#start-menu h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #ff00cc;
+}
+
+#start-menu button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #440077;
+  color: #ff00cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#start-menu button:hover {
+  background-color: #ff00cc;
+  color: #440077;
+  box-shadow: 0 0 15px #ff00cc;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #ff00cc;
+  cursor: pointer;
+}
+
+#start-menu input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  background-color: #220033;
+  border: 2px solid #ff00cc;
+  color: #ff00cc;
+  border-radius: 5px;
+}
+
+#start-menu input::placeholder {
+  color: #ff00cc80;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .board {
@@ -89,6 +155,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #reset-button:hover {
@@ -101,4 +168,53 @@ body {
 
 .cell:hover {
   transform: scale(1.05);
+}
+
+.game-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #220033;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #ff00cc;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+}
+
+.modal h2 {
+  color: #ff00cc;
+  margin-bottom: 20px;
+}
+
+.modal button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #440077;
+  color: #ff00cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #ff00cc;
+  color: #440077;
 }

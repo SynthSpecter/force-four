@@ -6,26 +6,40 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles.css">
    <title>Puissance 4 Synthwave</title>
-   <script src="script.js"></script>
+   <script src="script.js" defer></script>
 </head>
 
 <body>
    <div id="start-menu">
       <h1>Puissance 4 Synthwave</h1>
+      <input type="text" id="player1-name" placeholder="Nom du Joueur 1">
+      <input type="text" id="player2-name" placeholder="Nom du Joueur 2">
       <button id="start-button">Commencer le jeu en JCJ</button>
       <button id="toggle-computer">Jouer contre l'ordinateur</button>
    </div>
-   <div class="board">
-      <div class="grid"></div>
+   <div id="game-container" style="display: none;">
+      <button id="back-to-menu" class="back-arrow">←</button>
+      <div class="board">
+         <div class="grid"></div>
+      </div>
+      <div class="game-info">
+         <div class="current-player">Joueur actuel :
+            <span id="player-display">Player 1</span>
+         </div>
+         <div id="score">
+            <span>Player 1: <span id="score-player1">0</span></span>
+            <span>Player 2: <span id="score-player2">0</span></span>
+         </div>
+         <button id="reset-button">Réinitialiser le jeu</button>
+      </div>
    </div>
-   <div class="current-player">Joueur actuel :
-      <span id="player-display">Player 1</span>
+   <div id="end-game-modal" class="modal">
+      <div class="modal-content">
+         <h2 id="modal-message"></h2>
+         <button id="play-again">Rejouer</button>
+         <button id="return-to-menu">Retour au menu</button>
+      </div>
    </div>
-   <div id="score">
-      <span>Player 1: <span id="score-player1">0</span></span>
-      <span>Player 2: <span id="score-player2">0</span></span>
-   </div>
-   <button id="reset-button">Réinitialiser le jeu</button>
 </body>
 
 </html>
