@@ -9,6 +9,27 @@ body {
   color: #ff00cc;
 }
 
+#app-container,
+#game-container {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 #start-menu {
   text-align: center;
   background-color: rgba(34, 0, 51, 0.8);
@@ -99,6 +120,18 @@ body {
   font-size: 24px;
   color: #ff00cc;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(7, 40px);
+    grid-template-rows: repeat(6, 40px);
+  }
+
+  .cell {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .cell.empty {
