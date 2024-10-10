@@ -6,11 +6,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles.css">
    <title>Puissance 4 Synthwave</title>
-   <script src="script.js" defer></script>
+   <!-- Defer script loading to improve page load performance -->
+   <!-- Différer le chargement du script pour améliorer les performances de chargement de la page -->
+   <script src="./scripts/main.js" type="module"></script>
 </head>
 
 <body>
    <main id="app-container">
+      <!-- Start menu section -->
+      <!-- Section du menu de démarrage -->
       <div id="start-menu">
          <h1>Synth-Force-4</h1>
          <input type="text" id="player1-name" placeholder="Nom du Joueur 1">
@@ -18,11 +22,22 @@
          <button id="start-button">Commencer le jeu à deux</button>
          <button id="toggle-computer">Jouer contre l'ordinateur</button>
       </div>
+
+      <!-- Game container (hidden by default) -->
+      <!-- Conteneur du jeu (caché par défaut) -->
       <div id="game-container" style="display: none;">
+         <!-- Back to menu button -->
+         <!-- Bouton de retour au menu -->
          <button id="back-to-menu" class="back-arrow" aria-label="Retour au menu">←</button>
+
+         <!-- Game board -->
+         <!-- Plateau de jeu -->
          <div class="board">
             <div class="grid"></div>
          </div>
+
+         <!-- Game information panel -->
+         <!-- Panneau d'informations du jeu -->
          <div class="game-info">
             <div class="current-player">Joueur actuel :
                <span id="player-display">Player 1</span>
@@ -34,6 +49,9 @@
             <button id="reset-button">Réinitialiser le jeu</button>
          </div>
       </div>
+
+      <!-- End game modal -->
+      <!-- Modal de fin de jeu -->
       <div id="end-game-modal" class="modal">
          <div class="modal-content">
             <h2 id="modal-message"></h2>
